@@ -1,55 +1,16 @@
-# ✨ Welcome to My Digital Portfolio
+# React + Vite
 
-## 👋 Hello, I'm Sushmitha
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This portfolio is more than just a website—it's a reflection of my learning journey, creativity, and passion for technology. As a B.Tech student and aspiring software professional, I continuously explore new technologies, build projects, and enhance my skills to grow in the world of software development.
+Currently, two official plugins are available:
 
-## 🚀 About This Portfolio
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-This portfolio serves as a central hub where visitors can learn about:
+## React Compiler
 
-* 🎓 My educational background
-* 💻 Technical skills and tools
-* 📂 Academic and personal projects
-* 🌱 Learning journey and future goals
-* 📞 Contact information
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Technologies Used
+## Expanding the ESLint configuration
 
-* HTML5
-* CSS3
-* JavaScript
-* React js
-* Responsive Web Design
-
-## 🌟 Highlights
-
-✔ Modern and clean user interface
-
-✔ Mobile-friendly and responsive design
-
-✔ Project showcase section
-
-✔ Professional profile presentation
-
-✔ Easy navigation and user experience
-
-## 🎯 My Mission
-
-I believe technology is a powerful tool for solving real-world problems. Through continuous learning and hands-on projects, I aim to build innovative solutions that create meaningful impact.
-
-## 📚 Current Focus
-
-* Web Development
-* Data Analytics
-* Software Engineering
-* Problem Solving
-
-## 🤝 Let's Connect
-
-I am always open to learning opportunities, collaborations, and meaningful discussions about technology and innovation.
-
-Thank you for visiting my portfolio repository! ⭐
-
-If you like this project, feel free to give it a star and follow my journey.
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
