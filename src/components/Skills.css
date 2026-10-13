@@ -1,0 +1,229 @@
+/* ========================================================
+   SKILLS SECTION — Unified Minimalist Tag Cloud
+   ======================================================== */
+
+.skills-section {
+  padding: 6.5rem 1rem;
+}
+
+/* ── Centered Header ───────────────────── */
+.skills-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2.75rem;
+  width: 100%;
+}
+
+.skills-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.28rem 0.95rem;
+  border-radius: 999px;
+  margin: 0 auto 0.85rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.skills-title {
+  margin: 0 auto 0.35rem !important;
+  text-align: center;
+  display: block;
+}
+
+.skills-tagline {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Minimal Filter Navigation Bar ─────── */
+.skills-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  color: var(--text-color);
+  border-color: var(--text-color);
+  background: var(--card-bg);
+}
+
+.filter-btn.active {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border-color: var(--text-color);
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+/* ── Unified Tag Cloud Container ───────── */
+.skills-tag-cloud-container {
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.skill-cloud-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.skill-cloud-group + .skill-cloud-group {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Group Header */
+.cloud-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cloud-group-icon {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+}
+
+.cloud-group-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cloud-group-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-color);
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  margin-left: 0.2rem;
+}
+
+/* Badges Wrapper */
+.cloud-badges-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+/* Individual Skill Chip */
+.cloud-skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1rem 0.55rem 0.65rem;
+  border-radius: 10px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: default;
+  transform-style: preserve-3d;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.cloud-skill-chip:hover {
+  transform: perspective(600px) translateY(-4px) translateZ(10px) rotateX(4deg);
+  border-color: var(--text-color);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15), 0 0 15px var(--accent-glow);
+  background: var(--card-bg);
+}
+
+.chip-icon-box {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.chip-lucide {
+  color: var(--text-color);
+}
+
+.chip-emoji {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.chip-name {
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .skills-tag-cloud-container {
+    padding: 1.5rem;
+  }
+
+  .skills-filter-nav {
+    gap: 0.35rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .cloud-skill-chip {
+    padding: 0.45rem 0.85rem 0.45rem 0.55rem;
+    font-size: 0.82rem;
+  }
+}

@@ -1,0 +1,320 @@
+/* ========================================================
+   CERTIFICATES SECTION — Link-Based View
+   ======================================================== */
+
+.certificates-section {
+  padding: 6.5rem 1rem;
+}
+
+/* ── Centered Header ───────────────────── */
+.certificates-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.certificates-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.28rem 0.95rem;
+  border-radius: 999px;
+  margin: 0 auto 0.85rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.certificates-title {
+  margin: 0 auto 0.35rem !important;
+  text-align: center;
+  display: block;
+}
+
+.certificates-tagline {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-top: 0.2rem;
+}
+
+/* ── Links Card Container ──────────────── */
+.cert-links-card {
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.cert-links-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Individual Clickable Link Row ─────── */
+.cert-inline-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.4rem 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.cert-inline-link-btn:hover {
+  background: var(--glass-bg);
+}
+
+.link-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link-index {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.link-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: -0.2px;
+  transition: color 0.2s ease;
+}
+
+.cert-inline-link-btn:hover .link-title {
+  color: var(--accent-hover);
+}
+
+.link-action {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.link-view-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.cert-inline-link-btn:hover .link-view-label {
+  color: var(--text-color);
+}
+
+.link-icon-bubble {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.cert-inline-link-btn:hover .link-icon-bubble {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #ffffff;
+  transform: translate(2px, -2px) rotate(15deg);
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+/* Row Divider */
+.cert-link-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 0 2rem;
+}
+
+/* ── Lightbox Modal Viewer ─────────────── */
+.cert-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 5, 14, 0.88);
+  backdrop-filter: blur(14px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.cert-modal-box {
+  width: 100%;
+  max-width: 900px;
+  max-height: 92vh;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  overflow-y: auto;
+  position: relative;
+  padding: 2.25rem;
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.9), 0 0 30px rgba(139, 92, 246, 0.25);
+  animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalScaleUp {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.cert-modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.cert-modal-close-btn:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.cert-modal-header {
+  margin-bottom: 1.25rem;
+  padding-right: 3rem;
+}
+
+.cert-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.cert-modal-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--text-color);
+  letter-spacing: -0.4px;
+  margin-bottom: 0.2rem;
+}
+
+.cert-modal-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Multi-certificate tab bar for Infosys */
+.cert-multi-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cert-tab-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.cert-tab-btn.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+/* Certificate High-Res Viewer Frame */
+.cert-modal-image-wrapper {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-modal-full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .cert-inline-link-btn {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .link-view-label {
+    display: none;
+  }
+
+  .link-title {
+    font-size: 0.95rem;
+  }
+
+  .cert-link-divider {
+    margin: 0 1.25rem;
+  }
+
+  .cert-modal-box {
+    padding: 1.5rem;
+  }
+
+  .cert-modal-title {
+    font-size: 1.35rem;
+  }
+}
